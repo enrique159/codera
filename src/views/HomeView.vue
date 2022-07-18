@@ -1,11 +1,15 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <HeaderComp />
   </div>
 </template>
 
 <script>
+import HeaderComp from '@/components/home_view/HeaderComp.vue'
 export default {
   name: 'HomeView',
+  components: {
+    HeaderComp
+  },
 }
 </script>

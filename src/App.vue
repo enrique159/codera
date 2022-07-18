@@ -1,15 +1,28 @@
 <template>
   <div id="app">
+    <AppBarComp></AppBarComp>
     <router-view/>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import AppBarComp from './components/AppBarComp.vue'
+export default {
+  name: 'App',
+  components: {
+    AppBarComp
+  },
+  data() {
+    return {
+      //
+    }
+  },
+  methods: {
+    //
+  }
 }
+</script>
+<style lang="scss">
+@import '@/assets/fonts.css';
+@import '@/assets/styles.scss';
 </style>
