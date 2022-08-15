@@ -54,3 +54,45 @@
   font-display: auto;
   src: local("Gelion Thin"), url("@/assets/fonts/Gelion-Thin.ttf") format("truetype");
 }
+
+/* ============== Belfast Grotesk ============== */
+
+@font-face {
+  font-family: "Belfast Grotesk";
+  font-weight: 900;
+  font-style: normal;
+  font-display: auto;
+  src: local("Belfast Grotesk Black"), url("@/assets/fonts/belfast-grotesk-black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Belfast Grotesk";
+  font-weight: 800;
+  font-style: normal;
+  font-display: auto;
+  src: local("Belfast Grotesk Extra Bold"), url("@/assets/fonts/belfast-grotesk-extra-bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Belfast Grotesk";
+  font-weight: 700;
+  font-style: normal;
+  font-display: auto;
+  src: local("Belfast Grotesk Bold"), url("@/assets/fonts/belfast-grotesk-bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Belfast Grotesk";
+  font-weight: 500;
+  font-style: normal;
+  font-display: auto;
+  src: local("Belfast Grotesk Medium"), url("@/assets/fonts/belfast-grotesk-medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Belfast Grotesk";
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+  src: local("Belfast Grotesk Regular"), url("@/assets/fonts/belfast-grotesk-regular.ttf") format("truetype");
+}
