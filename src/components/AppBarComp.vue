@@ -65,12 +65,13 @@ import DrawerMenuComp from '@/components/DrawerMenuComp.vue'
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  background-color: var(--color-background);
+  background-color: transparent;
   transition: var(--transition-normal);
   z-index: 10;
 
   &.onScroll {
     box-shadow: 0 8px 32px 0 rgba(138, 139, 146, 0.158);
+    background-color: var(--color-background);
   }
 
   .app-bar__logo {
