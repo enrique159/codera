@@ -2,7 +2,7 @@
   <div class="about-comp">
     <div class="container">
       <div class="row">
-        <div class="col col-12 col-sm-6">
+        <div class="col col-12 col-sm-6 mb-4">
           <h2 class="ff-belfast">
             Nos dedicamos al desarrollo de software a la medida
           </h2>

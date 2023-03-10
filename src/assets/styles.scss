@@ -100,15 +100,13 @@ ul {
   list-style: none;
 }
 
-// a {
-//   color: currentColor !important;
-//   text-decoration: none;
-//   transition: var(--transition-rapida);
-//   &:hover{
-//     color: currentColor;
-//     filter: saturate(5);
-//   }
-// }
+a {
+  color: var(--color-text);
+}
+
+i {
+  color: #231f20;
+}
 
 img,
 video {

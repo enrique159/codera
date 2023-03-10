@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="container-fluid px-0">
     <div class="app-bar" :class="{ onScroll: !view.topOfPage, 'nav-active': menu }">
       <div class="app-bar__logo">
         <router-link to="/">
@@ -10,13 +10,6 @@
       <button class="button-menu" @click="openMenu">
         <i class="bi bi-three-dots"></i>
       </button>
-
-      <!-- <div class="app-bar__menu d-none d-md-flex">
-        <a href="#home">Inicio</a>
-        <a href="#about">Acerca de</a>
-        <a href="#services">Servicios</a>
-        <a href="#contact">Contacto</a>
-      </div> -->
     </div>
     <DrawerMenuComp :menu="menu" v-on:updateMenu="menu = $event"/>
   </div>
@@ -53,6 +46,9 @@ import DrawerMenuComp from '@/components/DrawerMenuComp.vue'
         this.menu = true;
       },
     },
+    beforeDestroy() {
+      window.removeEventListener("scroll", this.handleScroll);
+    },
   }
 </script>
 
@@ -66,7 +62,7 @@ import DrawerMenuComp from '@/components/DrawerMenuComp.vue'
   align-items: center;
   position: fixed;
   background-color: transparent;
-  transition: var(--transition-normal);
+  transition: var(--transition-fast);
   z-index: 10;
 
   &.onScroll {

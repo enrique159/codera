@@ -1,17 +1,22 @@
 <template>
-  <div class="drawer-menu-comp" @click.self="closeMenu" :class="{ 'hide' : !menuProp}">
+  <div
+    class="drawer-menu-comp"
+    @click.self="closeMenu"
+    :class="{ hide: !menuProp }"
+  >
     <div class="menu-container">
-      <button class="button-close" @click="closeMenu">
-        <i class="bi bi-x-lg"></i>
-      </button>
-      <div class="row">
-        <div class="col">
-          <div class="menu-content">
-            <a href="#">Inicio</a>
-            <a href="#">Acerca de</a>
-            <a href="#">Servicios</a>
-            <a href="#">Contacto</a>
-          </div>
+      <div class="row justify-content-end">
+        <button class="button-close" @click="closeMenu">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <div class="menu-navigation">
+        <div class="menu-nav">
+          <a href="#">Inicio</a>
+          <a href="#">Acerca de</a>
+          <a href="#">Servicios</a>
+          <a href="#">Portafolio</a>
+          <a href="#">Contacto</a>
         </div>
       </div>
     </div>
@@ -20,12 +25,12 @@
 
 <script>
 export default {
-  name: 'DrawerMenuComp',
+  name: "DrawerMenuComp",
   props: {
     menu: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   computed: {
     menuProp: {
@@ -33,16 +38,16 @@ export default {
         return this.menu;
       },
       set(value) {
-        this.$emit('updateMenu', value);
-      }
-    }
+        this.$emit("updateMenu", value);
+      },
+    },
   },
   methods: {
     closeMenu() {
       this.menuProp = false;
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -65,15 +70,12 @@ export default {
   .menu-container {
     background-color: var(--color-white);
     width: 100%;
-    max-width: 768px;
+    max-width: 480px;
     height: 100%;
     padding: 3rem;
     position: relative;
 
     .button-close {
-      position: absolute;
-      top: 1.6rem;
-      left: 2rem;
       background-color: var(--color-white);
       width: 36px;
       height: 36px;
@@ -81,7 +83,9 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
-      i { font-size: 24px;}
+      i {
+        font-size: 24px;
+      }
       &:hover {
         background-color: #000000;
         color: #ffffff;
@@ -89,10 +93,47 @@ export default {
       }
     }
 
-    .menu-content {
+    .menu-navigation {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+    }
+
+    .menu-nav {
       display: flex;
       flex-direction: column;
-      column-gap: 2rem;
+      row-gap: 1rem;
+      height: 100%;
+      justify-content: center;
+      a {
+        text-decoration: none;
+      }
+    }
+
+    .menu-nav {
+      a {
+        font-size: 3rem;
+        font-weight: 600;
+        color: var(--color-black);
+        line-height: 1;
+        transition: 0.3s ease-in-out;
+      }
+
+      a {
+        background: linear-gradient(0deg, #231f20, #231f20) no-repeat right
+          bottom / 0 var(--bg-h);
+        transition: background-size 350ms;
+        padding: 0.3rem 1rem 0.6rem 2rem;
+        border-radius: 2rem;
+        --bg-h: 100%;
+      }
+
+      a:where(:hover, :focus-visible) {
+        background-size: 100% var(--bg-h);
+        background-position-x: left;
+        color: var(--color-white);
+      }
     }
   }
 }

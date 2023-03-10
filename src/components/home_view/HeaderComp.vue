@@ -82,4 +82,10 @@ export default {
   top: 0px;
   left: 0px;
 }
+
+@media only screen and (max-width: 768px) {
+  .header-comp {
+    min-height: 90vh;
+  }
+}
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="home px-5 px-sm-0">
+  <div class="home px-2 px-sm-0">
     <HeaderComp />
     <AboutComp />
   </div>
