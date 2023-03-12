@@ -40,6 +40,11 @@
   --font-light: 300;
   --font-thin: 200;
 
+  /*========== Line height ==========*/
+  --lh-tight: 0.8;
+  --lh-normal: 1;
+  --lh-loose: 2;
+
   /*========== z index ==========*/
   --z-tooltip: 10;
   --z-fixed: 100;
@@ -190,6 +195,11 @@ input {
 .tw-regular { font-weight: var(--font-regular); }
 .tw-light { font-weight: var(--font-light); }
 .tw-thin { font-weight: var(--font-thin); }
+
+// TEXT LINE HEIGHT
+.lh-tight { line-height: var(--lh-tight); }
+.lh-normal { line-height: var(--lh-normal); }
+.lh-loose { line-height: var(--lh-loose); }
 
 // FONT FAMILY
 .ff-general { font-family: var(--general-font); }

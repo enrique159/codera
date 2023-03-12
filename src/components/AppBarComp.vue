@@ -7,9 +7,14 @@
         </router-link>
       </div>
 
-      <button class="button-menu" @click="openMenu">
+      <!-- <button class="button-menu" @click="openMenu">
         <i class="bi bi-three-dots"></i>
+      </button> -->
+
+      <button class="button-menu" @click="goTo()">
+        <i class="bi bi-whatsapp"></i>
       </button>
+
     </div>
     <DrawerMenuComp :menu="menu" v-on:updateMenu="menu = $event"/>
   </div>
@@ -45,6 +50,9 @@ import DrawerMenuComp from '@/components/DrawerMenuComp.vue'
       openMenu() {
         this.menu = true;
       },
+      goTo() {
+        window.open('https://wa.link/a1sknx', '_blank');
+      }
     },
     beforeDestroy() {
       window.removeEventListener("scroll", this.handleScroll);
@@ -104,7 +112,7 @@ import DrawerMenuComp from '@/components/DrawerMenuComp.vue'
     display: flex;
     justify-content: center;
     align-items: center;
-    i { font-size: 24px;}
+    i { font-size: 24px; color: var(--color-secondary);}
     &:hover {
       box-shadow: var(--bs-normal);
     }

@@ -29,6 +29,6 @@ export default {
 .about-comp {
   width: 100%;
   height: fit-content;
-  min-height: 80vh;
+  padding-bottom: 100px;
 }
 </style>
